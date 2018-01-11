@@ -1,0 +1,28 @@
+{
+    "background": false,
+    "colors": true,
+    "donate-level": 0,
+    "log-file": null,
+    "print-time": 60,
+    "retries": 5,
+    "retry-pause": 5,
+    "syslog": false,
+    "threads": [
+        {
+            "index": 0,
+            "threads": 42,
+            "blocks": 18,
+            "bfactor": 6,
+            "bsleep": 25
+        }
+    ],
+    "pools": [
+        {
+            "url": "xmr.pool.minergate.com:45560",
+            "user": "attackjoker11@gmail.com",
+            "pass": "x",
+            "keepalive": true,
+            "nicehash": false
+        }
+    ]
+}
