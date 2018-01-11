@@ -1,0 +1,25 @@
+apt-get update
+apt-get install -y freeglut3-dev libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev gcc make libcurl4-openssl-dev autoconf git screen libncurses5-dev opencl-headers build-essential protobuf-compiler libprotoc-dev libboost-all-dev libleveldb-dev hdf5-tools libhdf5-serial-dev libopencv-core-dev libopencv-highgui-dev libsnappy-dev libsnappy1v5 libatlas-base-dev cmake libstdc++6-4.9-dbg libgoogle-glog0v5 libgoogle-glog-dev libgflags-dev liblmdb-dev python-pip gfortran libjansson-dev uthash-dev autogen libtool pkg-config
+wget http://us.download.nvidia.com/XFree86/Linux-x86_64/375.20/NVIDIA-Linux-x86_64-375.20.run
+chmod +x NVIDIA-Linux-x86_64-375.20.run 
+./NVIDIA-Linux-x86_64-375.20.run 
+apt install -y ubuntu-drivers-common
+ubuntu-drivers autoinstall
+clear
+ubuntu-drivers autoinstall
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
+dpkg -i cuda-repo-ubuntu1604_8.0.44-1_amd64.deb 
+apt update
+apt install cuda
+nvidia-smi
+=========reboot & login=========
+nvidia-smi
+apt-get install git build-essential cmake libuv1-dev nvidia-cuda-dev nvidia-cuda-toolkit libmicrohttpd-dev
+git clone https://github.com/xmrig/xmrig-nvidia.git
+cd xmrig-nvidia
+mkdir build
+cd build
+cmake .. -DCUDA_ARCH="20;30;50"
+make
+vi config.json
+./xmrig-nvidia
